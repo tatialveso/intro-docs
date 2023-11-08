@@ -3,12 +3,12 @@
 aqui estão reunidos documentações e explicações de linguagens de programação e tecnologias que aprendi ao longo dos anos, junto com algumas explicações que utilizei durante a minha carreira de pessoa instrutora e que me ajudaram muito para estudar.
 
 ## back-end
-* [introdução ao node](https://github.com/tatialveso/intro-node)
-* [introdução ao mongodb e mongoose](https://github.com/tatialveso/intro-mongodb)
-* [introdução ao express](https://github.com/tatialveso/intro-express)
+* [introdução ao node](back-end/intro-node.md)
+* [introdução ao mongodb e mongoose](back-end/intro-mongodb.md)
+* [introdução ao express](back-end/intro-express.md)
 
 ## front-end
-* [introdução ao html](https://github.com/tatialveso/intro-html)
+* [introdução ao html](front-end/intro-html.md)
 * introdução ao css
 * introdução ao react
 * introdução ao angular
