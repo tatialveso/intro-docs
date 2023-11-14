@@ -21,7 +21,7 @@ seletor {
 
 O comentário é feito pela indicação `/* */` , sendo o comentário escrito entre os sinais.
 
-# Como devemos unir HTML e CSS?
+# 🔄️ Como devemos unir HTML e CSS?
 
 Para que as regras do CSS sejam implementadas no HTML precisamos referenciá-lo no documento HTML. Existem três formas de fazer isso:
 
@@ -58,7 +58,7 @@ Para que as regras do CSS sejam implementadas no HTML precisamos referenciá-lo 
 
 A melhor forma de utilizar a referência CSS vai de acordo com cada projeto. Por exemplo, um projeto com diversas páginas mas que possuem formação igual pede por um **CSS Externo**, pois podemos usar uma única regra CSS para diversas páginas HTML; enquanto uma mudança em uma única página com regras específicas pode ser usada o **CSS Interno**.
 
-# Seletores CSS
+# 🏅 Seletores CSS
 
 Os seletores são identificadores dos elementos HTML que queremos formatar ou alterar de acordo com as regras CSS implementadas.
 
@@ -77,7 +77,7 @@ Os seletores básicos podem ser separados por três categorias:
 
 - **Seletores de id**
     
-    O indicado no seletor é um id, que é um atributo HTML com o valor sendo um nome customizado. As regras ditadas são implementadas no elemento específico com este ID.
+    O indicado no seletor é um `id`, que é um atributo HTML com o valor sendo um nome customizado. As regras ditadas são implementadas no elemento específico com este `id`.
     
     ```css
     #contato {
@@ -111,7 +111,7 @@ seletor:pseudo-seletor {
 
 Alguns dos mais usados pseudo-seletores são o `:hover`, que determina as regras do elemento quando o mouse for passado pelo elemento e o `:focus`, que é quando o foco estiver no elemento (quando clicado por exemplo).
 
-# Propriedades CSS
+# 💎 Propriedades CSS
 
 ## Cor
 
@@ -145,11 +145,13 @@ Já o `font-weight` determina a espessura da fonte, como o negrito; enquanto o `
 
 Outras propriedades CSS podem ser acessadas [**neste link**](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference).
 
-# CSS Box Model
+# 📦 CSS Box Model
 
-No HTML todos os elementos podem ser considerado caixas. No CSS, esses elementos podem ser formatados e alterados de acordo com o modelo de caixa (box model). 
+No HTML todos os elementos podem ser considerado caixas.
 
-![https://miro.medium.com/max/725/1*FqGQIGmGdW5EetfS3HFkvA.png](https://miro.medium.com/max/725/1*FqGQIGmGdW5EetfS3HFkvA.png)
+No CSS, esses elementos podem ser formatados e alterados de acordo com o modelo de caixa.
+
+<div align="center"><img src="https://miro.medium.com/max/725/1*FqGQIGmGdW5EetfS3HFkvA.png"/></div>
 
 O modelo de caixa utiliza três propriedades que altera o em torno do elemento. O conteúdo em si do elemento pode ser alterado com as propriedades de altura e largura.
 
@@ -159,7 +161,7 @@ Tanto o `padding` quanto a `margin` podem ter o mesmo valor dos quatro lados, ou
 
 Já o `border` é usado com três valores, onde o primeiro determina a espessura da borda, o segundo a forma da borda e o terceiro a cor da borda.
 
-# CSS Display
+# 🪟 CSS Display
 
 A propriedade `display` controla o layout da página, ou seja, ela determina a disposição dos elementos de uma página, auxiliando na visualização do site.
 
@@ -177,9 +179,9 @@ O `display: grid` oferece um layout da página a base de grade.
 
 Com o `grid-template-columns` determina o número total de colunas na grid, podendo ser calculadas individualmente ou usado a função `repeat(x, y)` onde será determinado o total de colunas e depois o tamanho de todas as colunas. O `grid-template-rows` determina o número total de linhas da grid. Outra alternativa é o `grid-template-areas`, que define áreas específicas da grade. O `gap` determina o espaço entre um elemento e o outro dentro da grade.
 
-# Media Query
+# 📲 Media query
 
-A Media Query é um conjunto de regras CSS que permite a página se adaptar a diferentes tamanhos de telas conforme determinado dentro da regra. Para a utilização da `@media` é preciso determinar se a página será *Mobile First* ou *Desktop First*, ou seja, se o padrão do projeto será feito para dispositivos móveis (*Mobile First*) ou telas grandes (*Desktop First*).
+A media query é um conjunto de regras CSS que permite a página se adaptar a diferentes tamanhos de telas conforme determinado dentro da regra. Para a utilização da `@media` é preciso determinar se a página será *Mobile First* ou *Desktop First*, ou seja, se o padrão do projeto será feito para dispositivos móveis (*Mobile First*) ou telas grandes (*Desktop First*).
 
 ```css
 @media (tamanho: valor) {
@@ -193,7 +195,7 @@ Na estrutura da media query determinamos o tamanho da tela que as regras ali den
 
 Dentro dos colchetes da `@media`, seguimos com a estrutura básica da regra comum de CSS, então quando a tela aumentar ou diminuir os elementos serão modificados. Lembrando que não é preciso reescrever todas as regras do CSS, apenas reescrever aquelas que mudarão conforme a tela.
 
-# Unidades de Medida CSS
+# 📏 Unidades de Medida CSS
 
 Existem dois tipos de unidades de medida dentro do CSS, medidas absolutas e relativas. A segunda são ótimas para a questão da responsividade, uma vez que ela se adapta ao tamanho da tela que a página está.
 
