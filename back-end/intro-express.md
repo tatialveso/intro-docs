@@ -7,7 +7,7 @@ O Express tem como objetivo criar servidores e trabalhar com requisições dentr
 
 A tecnologia faz parte do **MERN Stack**, que é o conjunto de tecnologias que completa a produção full stack de uma aplicação envolvendo MongoDB, Express, React e Node.
 
-# Criando um servidor com `express`
+# 🪅 Criando um servidor com `express`
 
 Dentro da pasta do projeto escolhido, rode no terminal o seguinte comando
 
@@ -187,3 +187,65 @@ node --watch app.js
 ```
 
 Abra no navegador ou em algum programa de requisição a URL [**http://localhost:4000/**](http://localhost:4000/) e observe que irá imprimir o que está sendo informado na requisição com caminho `/`.
+
+# 🪢 Entendendo dependências importantes para o servidor
+
+## `CORS`
+
+CORS significa Compartilhamento de Recursos de Origem Cruzada e garante a navegação segura dos usuários dentro da aplicação.
+
+Todos os navegadores, para criarem uma navegação segura ao usuário, possuem um mecanismo de segurança chamado Same-Origin Policy, que limita a interação entre scripts de origem diferente para bloquear possíveis ações maliciosas e criminosas. Para conseguirmos, então, criar a conexão entre o Front-end e o Back-end precisamos setar a origem de onde iremos cruzar essas informações.
+
+### Setando o `CORS`
+
+No terminal, instale a dependência
+
+```bash
+npm install cors
+```
+
+No arquivo principal faça a importação do `CORS` e chame a sua origem
+
+```jsx
+import cors from 'cors'
+
+app.use(cors( { origin: 'http://localhost:3000 } ))
+```
+
+O endereço utilizado no `origin` deve ser o da aplicação usada no Front-end.
+
+## `dotenv`
+
+Durante a criação do servidor reunimos diversas variáveis de ambiente, que são variáveis que vão definir como iremos trabalhar ou conexões com outras aplicações.
+
+Para concentrarmos essas variáveis de forma segura e que será individual para cada teste, utilizamos a dependência `dotenv` que seta e faz a comunicação da aplicação com as variáveis de ambiente, tornando-as dinâmicas de cada ambiente de desenvolvimento.
+
+### Setando o `dotenv`
+
+No terminal faça a instalação da dependência
+
+```bash
+npm install dotenv
+```
+
+Na raiz do projeto, crie um arquivo chamado `.env` e insira as variáveis de ambiente.
+
+```jsx
+PORT="8080"
+FRONT_URL="http://localhost:3000"
+```
+
+No arquivo principal do servidor, importe o `dotenv` e chame a configuração da dependência.
+
+Por fim, chame as variáveis com o comando padrão.
+
+```jsx
+import * as dotenv from 'dotenv'
+dotenv.config()
+
+app.use(cors({ origin: process.env.FRONT_URL }))
+
+app.listen(Number(process.env.PORT), () => {
+    console.log("server listening on port 3000")
+})
+```
