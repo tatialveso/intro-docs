@@ -1,16 +1,7 @@
-# Java
-
-Área do Conhecimento: Tecnologia
-Referência: https://docs.oracle.com/javase/tutorial/getStarted/index.html
+<h1 align="center">Introdução ao Java</h1>
 
 > *Java é uma linguagem de programação orientada a objetos e baseada em classes, concebida para dispor da menor quantidade possível de dependências de implementação, onde as aplicações são executadas em uma Máquina Virtual Java permitindo a portabilidade para diferentes plataformas.*
 > 
-
-<aside>
-📋 Veja o que está sendo abordado aqui:
-
-- **Tabela de conteúdo**
-</aside>
 
 O JVM significa **Java Virtual Machine** (Máquina Virtual de Java) e é uma máquina virtual que permite um computador de rodar programas Java assim como programas escrito em outras linguagens que também são compiladas em bytecode Java. 
 
@@ -18,13 +9,13 @@ O JDK significa **Java Development Kit** (Kit de Desenvolvimento Java) e é um s
 
 A execução do Java acontece em duas etapas, em que o compilador traduz o código que a pessoa desenvolvedora escreve (código-fonte) para bytecode, que é a linguagem binária que o computador entende. Dentro de todo projeto Java existe arquivos que não são manipulados pelas pessoas desenvolvedoras, mas são essenciais para essa compilação e tradução para que o computador entenda o código-fonte que estamos programando.
 
-# Comentários em Java
+# ✍️ Comentários em Java
 
 É possível fazer comentários no nosso código, servindo de apoio para nos comunicarmos entre equipe e indicar partes do nosso código ou para ocultar algo do código que não queremos que seja exibido no navegador.
 
 Para comentários em texto usamos a indicação `/* */` onde o compilador ignora o texto que está entre os sinais, assim como o comentário em linha indicado pelo sinal `//`, geralmente usado no final da linha de um código que queremos. Já o sinal `/** */` indica um comentário sobre documentação, onde o compilador ignora o comentário, mas a ferramenta `javadoc` usa esses comentários no momento de preparar a documentação gerada automaticamente do projeto.
 
-# **Estrutura básica do Java**
+# 🩻 Estrutura básica do Java
 
 O código em Java é composto por três componentes primários: comentários, a classe e o método.
 
@@ -40,7 +31,7 @@ Iniciamos com a indicação `class` para dizer que estamos manipulando uma class
 
 O método `main` é uma indicação padrão, toda aplicação precisa desse método. 
 
-# Declarações
+# 📢 Declarações
 
 Para armazenar e declarar valores usamos variáveis e constantes:
 
@@ -62,12 +53,13 @@ Para armazenar e declarar valores usamos variáveis e constantes:
     ```
     
 
-# Tipos de dado e Estrutura
+# 🎲 Tipos de dado e Estrutura
 
 Na declaração de valores devemos especificar o tipo de dados, que podem ser entre eles:
 
-| boolean | true e false |
+| tipo | valor |
 | --- | --- |
+| boolean | true e false |
 | String | frase ou palavra entre aspas duplas |
 | char | letra ou caractere entre aspas simples |
 | int | número inteiro |
@@ -83,8 +75,9 @@ Conseguimos realizar a conversão de tipo de dado dentro de uma variável se esp
 
 Dentro dos mesmos tipos de dados conseguimos realizar operações matemáticas e realizar cálculos ou unir frases. Abaixo está uma lista de operadores aritméticos e operadores relacionais.
 
-| + | adição |
+|  |  |
 | --- | --- |
+| + | adição |
 | - | subtração |
 | * | multiplicação |
 | / | divisão |
@@ -92,21 +85,23 @@ Dentro dos mesmos tipos de dados conseguimos realizar operações matemáticas e
 | ++ | incremento |
 | - - | decremento |
 
-| = | recebe |
+|  |  |
 | --- | --- |
+| = | recebe |
 | || | ou |
 | && | e |
 | ! | negativo |
 | != | diferente |
 
-| > | maior que |
+|  | |
 | --- | --- |
+| > | maior que |
 | < | menor que |
 | >= | maior ou igual que |
 | <= | menor ou igual que |
 | == | igual |
 
-# Tipos de laços
+# 🎀 Tipos de laços
 
 Com laços conseguimos executar repetições e impressões de forma mais rápida e economizando linhas de código, tornando-as dinâmicas.
 
@@ -199,7 +194,7 @@ Com os laços de repetição criamos um *loop*, ou seja, imprimimos valores de a
     ```
     
 
-# Programação Orientada a Objeto
+# 👔 Programação Orientada a Objeto
 
 A Orientação a Objeto tem como objetivo simular o mundo real dentro do código-fonte. Todos os dias, nós interagimos com objetos e temos ações que não pensamos sobre como estamos realizando essas ações ou como objetos se comportam de certa forma, apenas aceitamos esse comportamento uma vez que eles façam o que pedimos. Dentro da POO, o objeto é responsável por executar a ação ou comportamento e colaboram com outros objetos para a conclusão com sucesso dessa ação.
 
