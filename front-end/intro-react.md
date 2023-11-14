@@ -1,25 +1,9 @@
-# ReactJS
-
-Área do Conhecimento: Tecnologia
-Referência: https://pt-br.reactjs.org/
+<h1 align="center">Introdução ao React</h1>
 
 > *ReactJS é uma biblioteca Javascript de código aberto para a construção de interfaces de usuário. O React é considerado uma SPA ao possibilitar o carregamento rápido das páginas utilizando componentes em sua estrutura.*
 > 
 
-<aside>
-📋 Veja o que está sendo abordado aqui:
-
-- **Tabela de conteúdo**
-</aside>
-
-<aside>
-📌 Para saber mais sobre o Javascript, veja:
-
-[JavaScript](https://www.notion.so/JavaScript-7c91901c1c214989822032d83d80632c?pvs=21)
-
-</aside>
-
-# Single-Page Application
+# 📄 Single-Page Application
 
 São aplicações concentradas em uma visualização de uma única página.
 
@@ -27,7 +11,7 @@ Esse tipo de aplicação dá a sensação de estarmos navegando em uma aplicaç�
 
 Ao criar uma aplicação React estaremos sempre criando a noção de uma página única, onde montaremos componentes de acordo a nossa navegação.
 
-# Iniciando um projeto React
+# 🔰 Iniciando um projeto React
 
 No terminal devemos dar o comando de criação de um projeto, que criará uma pasta com os arquivos padrões dentro, ou seja, não é necessário criar uma pasta para inserir o projeto, pois o comando já fará isso:
 
@@ -47,7 +31,7 @@ yarn start
 
 Por padrão, todos os projetos React atendem na porta :3000.
 
-# O que é JSX e TSX?
+# ❓ O que é JSX e TSX?
 
 Como definido, o React é uma biblioteca de Javascript, dessa forma o conceito de JSX e TSX vem para unir essa linguagem de programação com a linguagem de marcação HTML. Então podemos entender que o JSX e o TSX é uma extensão de sintaxe para o Javascript e o Typescript, respectivamente.
 
@@ -57,18 +41,11 @@ const elemento = <h1>Olá, mundo!</h1>;
 
 O React usa essa extensão para facilitar a organização do projeto que, ao invés de separarmos tecnologias em arquivos diferentes, conseguimos criar componentes e utilizar as tecnologias de uma forma que faz mais sentido para o momento de renderização do código. Não é obrigatório o uso do JSX ou TSX em um projeto React, porém ele é muito utilizado pela sua organização.
 
-<aside>
-📌 Para saber mais sobre o HTML, veja:
-
-[HTML](https://www.notion.so/HTML-4b571e29c62f47db8a5af1be8fd61835?pvs=21)
-
-</aside>
-
-# Estrutura de pastas do React
+# 🗃️ Estrutura de pastas do React
 
 Ao ser criado, o projeto React acompanha algumas pastas e arquivos organizados e prontos para usarmos. Alguns podemos excluir dependendo do nosso objetivo e outros são fundamentais para o funcionamento da nossa aplicação.
 
-![https://miro.medium.com/max/800/1*eXN1LlNnuZmosJ7n7EsJ-Q.png](https://miro.medium.com/max/800/1*eXN1LlNnuZmosJ7n7EsJ-Q.png)
+<div align="center"><img src="https://miro.medium.com/max/800/1*eXN1LlNnuZmosJ7n7EsJ-Q.png"/></div>
 
 O arquivo `package.json` possui uma estrutura que declara as dependências usadas no nosso projeto e quais delas deverá ser instalada ao baixarmos o projeto em outra máquina. Essas dependências ficarão guardadas na pasta `node-modules/`, que não será manipulada mas é essencial pra o funcionamento. Em contrapartida, o arquivo `.gitignore` reune nomes de diretórios e arquivos que não subirão para o servidor pelo git.
 
@@ -78,7 +55,7 @@ Dentro da pasta `src/`, o arquivo `index.tsx` executa o método que renderiza os
 
 O `README.md` é um arquivo de documentação, que será muito útil para detalhar sobre o projeto no GitHub.
 
-# Componentes
+# 🧩 Componentes
 
 Os componentes trabalham como funções Javascript que aceitam entradas e retornam o que deve ser exibido no navegador. Ao criarmos componentes conseguimos separar as partes do nosso projeto para manipularmos cada parte independentemente e assim criar na prática o conceito de [**SPA**](ReactJS%20a5b35b74b7394b0497d1f29c97b68cdd.md).
 
@@ -100,7 +77,7 @@ Para que esse componente seja visualizado no navegador temos que exportá-lo atr
 
 A organização do nosso projeto fica a critério nosso e da equipe em que estamos trabalhando. No entanto é recomendado que todos os componentes fiquem reunidos em uma pasta chamada `components` e que dentro desta página os arquivos de código e de estilo fiquem reunidos dentro de uma outra pasta especificando qual componente é esse.
 
-# Rotas
+# 🎢 Rotas
 
 Para a criação de rotas no nosso projeto podemos utilizar a depedência react-router-dom através dos comandos:
 
@@ -116,15 +93,15 @@ E então inserir o comando a seguir no console também para instalar a utilizaç
 yarn add @types/react-router-dom
 ```
 
-# Model
+# 🕶️ Model
 
 A pasta de Model armazena os modelos do nosso banco de dados. Os arquivos contidos nele são os modelos, os objetos que vão conter os campos que farão a conexão com o banco de dados.
 
-# O que acontece na Service?
+# 🤵 O que acontece na Service?
 
 A Service é a camada de serviço, onde acontece a regra de negócio do nosso projeto, como por exemplo a nossa API.
 
-# Introdução a Hooks
+# 🪝 Introdução a Hooks
 
 **Hooks** são funções que nos permitem ligar aos *state* e ciclo de vida do React a partir de componentes funcionais. O estado (ou *state*) é uma propriedade do componente que possui valores e quando esses valores sofrem algum tipo de alteração, o componente é atualizado em tela, ou seja, ele é renderizado novamente.
 
@@ -146,7 +123,7 @@ Adiciona a funcionalidade de executar efeitos colaterais através de um componen
 
 Ao chamarmos o `useEffect` estamos falando para o React executar sua função de efeito após liberar as mudanças para o DOM. Os efeitos são declarados dentro do componente, para que eles tenham acesso as suas *props* e *state*.
 
-# Utilizando o Redux no seu projeto
+# ⚓ Utilizando o Redux no seu projeto
 
 É uma biblioteca independente do React, sendo possível utilizá-lo com outras ferramentas sem ser o React.
 
@@ -227,21 +204,6 @@ const dispatch = useDispatch();
 dispatch(action);
 ```
 
-# Estilizando o nosso projeto em React
+# 🎨 Estilizando o nosso projeto em React
 
 Ao se tratar de estilização podemos utilizar diversas ferramentas para nos auxiliar. Temos bibliotecas que vão nos ajudar na gestão do tempo como o Bootstrap e o Material UI, e outras ferramentas que dinamizam a disposição do CSS como o styled-components. Mais uma vez, a ferramenta certa para o projeto fica à critério da equipe ou das nossas necessidades.
-
-<aside>
-📌 Para saber mais sobre o CSS e suas bibliotecas, veja:
-
-[CSS](https://www.notion.so/CSS-e84b73253edf402ea4c064116b5681e9?pvs=21)
-
-[**Material UI**](https://mui.com/getting-started/installation/)
-
-**[Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/)**
-
-**[styled-components](https://styled-components.com/docs)**
-
-</aside>
-
-[Links](ReactJS%20a5b35b74b7394b0497d1f29c97b68cdd/Links%20343e0dc6d6174395b37a5f0365775b8b.md)
