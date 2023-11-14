@@ -1,24 +1,15 @@
-# JavaScript
-
-Área do Conhecimento: Tecnologia
-Referência: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+<h1 align="center">Introdução ao Javascript</h1>
 
 > *Javascript é uma linguagem de programação que permite a introdução de complexidade nas páginas web, pensando na interação entre usuário e página, ou seja, ao inserirmos o Javascript transformamos nossas páginas HTML em páginas dinâmicas.*
 > 
 
-<aside>
-📋 Veja o que está sendo abordado aqui:
-
-- **Tabela de conteúdo**
-</aside>
-
-# Comentários em Javascript
+# ✍️ Comentários em Javascript
 
 É possível fazer comentários no nosso código, servindo de apoio para nos comunicarmos entre equipe e indicar partes do nosso código ou para ocultar algo do código que não queremos que seja exibido no navegador.
 
 Existem dois tipos de maneiras de criar comentários no nosso código. O primeiro é o comentário por linha que é sinalizado por `//` antes da frase de comentário; e o segundo é por `/* */` , onde colocamos o comentário entre os sinais.
 
-# Declarações
+# 📢 Declarações
 
 Existem três formas de declarar valores no nosso código:
 
@@ -37,12 +28,13 @@ Existem três formas de declarar valores no nosso código:
     Com o `const` criamos um valor constante, ou seja, que não pode ser alterado ou modificado.
     
 
-# Tipos de dados e Estrutura
+# 🎲 Tipos de dados e estrutura
 
 Dentro do Javascript conseguimos manipular certos tipos de dados, entre eles:
 
-| boolean | true e false |
+| tipo de dado | valor |
 | --- | --- |
+| boolean | true e false |
 | null | valor nulo |
 | undefined | valor indefinido |
 | number | número |
@@ -71,7 +63,7 @@ Conseguimos também criar Arrays, que são conjunto de dados armazenados em uma 
 let ourArray = ["Maria", 23, false];
 ```
 
-# Tipos de laços
+# 🎀 Tipos de laços
 
 Com laços conseguimos executar repetições e impressões de forma mais rápida e economizando linhas de código, tornando-as dinâmicas.
 
@@ -153,7 +145,7 @@ Os laços condicionais são um conjunto de ações ou cálculo que são executad
     ```
     
 
-# Como podemos unir Javascript e HTML?
+# 🤝 Como podemos unir Javascript e HTML?
 
 Para que os eventos do Javascript seja implementado no HTML do nosso projeto devemos inserir um `<script>` no final da tag `<body>` de modo em que a última informação antes da tag de fechamento do corpo do nosso site seja a indicação do Javascript. Existem também duas formas de referenciar o código JS no HTML:
 
@@ -176,17 +168,7 @@ Para que os eventos do Javascript seja implementado no HTML do nosso projeto dev
     <script src="script.js"></script>
     ```
     
-
-<aside>
-📌 Para saber mais sobre o HTML e o CSS, veja:
-
-[HTML](https://www.notion.so/HTML-4b571e29c62f47db8a5af1be8fd61835?pvs=21)
-
-[CSS](https://www.notion.so/CSS-e84b73253edf402ea4c064116b5681e9?pvs=21)
-
-</aside>
-
-# Funções em Javascript
+# 🎭 Funções em Javascript
 
 Funções são blocos de construção que possuem um conjunto de instrução que executa uma tarefa ou calcular um valor. A estrutura básica de uma função no Javascript acontece da seguinte forma:
 
@@ -240,12 +222,13 @@ Seguindo o exemplo ao lado, o `numeroFora` faz parte do escopo global do código
 
 A forma como [declararemos nossas variáveis](JavaScript%207c91901c1c214989822032d83d80632c.md) irá afetar o resultado também do nosso escopo.
 
-# Eventos em Javascript
+# 🎪 Eventos em Javascript
 
 São um conjunto de ações que um elemento HTML realiza, muitas vezes gatilhado por uma ação do usuário navegando a página. Esses eventos se transformam em atributos no nosso arquivo HTML dentro da tag de abertura do elemento que se deseja alterar durante o evento. Abaixo temos alguns eventos que conseguimos inserir no nosso projeto:
 
-| onBlur | remove o foco do elemento |
+| ação | o que faz |
 | --- | --- |
+| onBlur | remove o foco do elemento |
 | onChange | altera o valor do elemento |
 | onClick | altera o valor quando o elemento for clicado |
 | onFocus | altera o valor quando o elemento for focado |
@@ -290,11 +273,11 @@ Existe três formas de inserir os eventos ao código:
 
 Conseguimos remover um evento com o `removeEventListener`.
 
-# Orientação a Objeto com JavaScript
+# 🫙 Orientação a Objeto com JavaScript
 
-# DOM no Javascript
+# 🩻 DOM no Javascript
 
-![https://dkrn4sk0rn31v.cloudfront.net/uploads/2021/04/arvore-dom.png](https://dkrn4sk0rn31v.cloudfront.net/uploads/2021/04/arvore-dom.png)
+<div align="center"><img src="https://dkrn4sk0rn31v.cloudfront.net/uploads/2021/04/arvore-dom.png"/></div>
 
 O DOM significa Document Object Model (Modelo de Objeto de Documento) e representa a página web dentro do Javascript. Ao alterar algo da nossa página pelo Javascript estaremos alterando o modelo do documento e não o documento em si.
 
