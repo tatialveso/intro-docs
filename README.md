@@ -9,6 +9,6 @@ aqui estão reunidos documentações e explicações de linguagens de programaç
 
 ## front-end
 * [introdução ao html](front-end/intro-html.md)
-* introdução ao css
+* [introdução ao css](front-end/intro-css.md)
 * introdução ao react
 * introdução ao angular
