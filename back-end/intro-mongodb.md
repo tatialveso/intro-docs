@@ -3,13 +3,13 @@
 > *Programa de banco de dados distribuído não-relacional orientado a documentos que armaneza dados em coleções.*
 > 
 
-# Introdução ao MongoDB
+# 🔰 Introdução ao MongoDB
 
-![https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_157ca84354e93013a2289e0e4a8809a6.png](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_157ca84354e93013a2289e0e4a8809a6.png)
+<div align="center"><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_157ca84354e93013a2289e0e4a8809a6.png"></div>
 
 É um banco de dados não-relacional que armaneza informações em coleções. As informações coletadas são flexíveis, semelhantes a `JSON` e com campos significativos que podem variar de documento para documento. A sua forma de distribuição permite escabilidade horizontal que é fácil de manuseio.
 
-# Instalação do MongoDB
+# ⚙️ Instalação do MongoDB
 
 Para instalar o MongoDB no sistema operacional Windows é preciso ir até o [**site oficial**](https://www.mongodb.com/try/download/community) da ferramenta e selecionar a versão desejada para instalação.
 
@@ -59,7 +59,7 @@ Dentro de uma conexão é possível ter vários bancos de dados e dentro de cada
 
 Nessas coleções é possível insirar cada informação de forma individual ou importar um `JSON` de algum outro lugar.
 
-# Operações de buscas dentro do MongoDB Compass
+# 🔎 Operações de buscas dentro do MongoDB Compass
 
 ## Consultas básicas
 
@@ -246,3 +246,67 @@ Usado para retornar informações onde o valor daquele campo seja o indicado dur
 ```sql
 { field: { $type: <BSON type> } }
 ```
+
+# 🔛 Conectando o MongoDB com o servidor
+
+Para auxiliar na conexão do servidor com o MongoDB é preciso instalar a dependência do `mongoose`, que chamaremos para setar a estrutura do nosso banco de dados que ficará armazenada no MongoDB.
+
+```bash
+npm install mongoose
+```
+
+A conexão é feito dentro de um arquivo chamado `db.config.js` que guardará apenas essa conexão e nada mais.
+
+```jsx
+import mongoose from "mongoose"
+
+async function connect() {
+  try {
+    const dbConnect = await mongoose.connect(process.env.MONGODB_URI)
+
+    console.log(`Connect to DB: ${dbConnect.connection.name}`)
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+export default connect
+```
+
+No arquivo principal, é preciso fazer a importação da conexão
+
+```jsx
+import dbConnect from './config/db.config.js'
+
+dbConnect()
+```
+
+# 📢 Models & Schemas
+
+Ao arquitetarmos o nosso banco de dados precisamos entender o que irá compor esse nosso projeto.
+
+As models são modelos de esquemas de informação que irá populações as coleções do nosso banco. Cada coleção precisa de um esquema e, por consequência, um modelo.
+
+Dentro do projeto, crie um arquivo chamado `models` e é nele que ficará concentrados todos os esquemas de nosso banco.
+
+Cada arquivo será nomeado com o seu tema mais `model.js` e terá o seguinte esqueleto de código
+
+```jsx
+import { Schema, model } from "mongoose"
+
+const schema = new Schema({
+    field: { validation: value }
+	})
+
+const Model = model("Collection", schema)
+
+export default Model
+```
+
+Este código está sendo importado pelo `mongoose` e teremos duas informações neste arquivo: `model` e `schema`.
+
+Primeiro criaremos um novo `Schema` que contará dentro dele um objeto que setará todos os campos e possíveis validações para aquele campo como, por exemplo, se ele é um campo obrigatório ou único ou que tipo de dado ele será.
+
+Após a criação do esquema, criaremos o modelo dessa coleção onde usaremos o `PascalCase` para dar um nome para a `model` e dentro do chamamento do método criaremos um nome em singular para a nossa coleção junto com o `schema` criado acima. 
+
+Por fim exportaremos o `model` criado.
