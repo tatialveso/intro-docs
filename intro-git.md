@@ -1,24 +1,15 @@
-# Git
-
-Área do Conhecimento: Tecnologia
-Referência: https://git-scm.com/book/en/v2
+<h1 align="center">Introdução ao Git</h1>
 
 > *Git é um sistema de controle de versão que permite a criação de repositórios para a guarda e controle de atualizações de um projeto para a organização de equipe.*
 > 
 
-<aside>
-📋 Veja o que está sendo abordado aqui:
-
-- **Tabela de conteúdo**
-</aside>
-
-# O que é controle de versão?
+# 💿 O que é controle de versão?
 
 Controle de versão é um sistema que grava alterações para um arquivo ou conjunto de arquivos ao longo de um tempo necessário para recuperação dessas versões. Ele te permite reverter alterações de um arquivo selecionado ou de um projeto todo, comparar mudanças ao longo do tempo, observar o responsável pelas alterações e etc.
 
-# Como funciona o Git?
+# 🔰 Como funciona o Git?
 
-![https://git-scm.com/book/en/v2/images/snapshots.png](https://git-scm.com/book/en/v2/images/snapshots.png)
+<div align="center"><img src="https://git-scm.com/book/en/v2/images/snapshots.png"></div>
 
 Todas as vezes que você commita ou salva o estado do seu projeto, o Git tira uma foto de como o seu arquivo se parece nesse momento e guarda uma referência daquela foto. Caso o arquivo não foi alterado naquela versão, o Git não rearmazena aquele arquivo, apenas guarda um link para o arquivo idêntico que já foi guardado (File B na imagem).
 
@@ -43,7 +34,7 @@ Existem três estados principais no qual o seu arquivo pode ficar:
     Significa que as informações do arquivo está seguramente armazenada no repositório local.
     
 
-![https://git-scm.com/book/en/v2/images/areas.png](https://git-scm.com/book/en/v2/images/areas.png)
+<div align="center"><img src="https://git-scm.com/book/en/v2/images/areas.png"></div>
 
 O fluxo de trabalho do Git funciona da seguinte forma:
 
@@ -52,7 +43,7 @@ O fluxo de trabalho do Git funciona da seguinte forma:
 3. Commitamos (Commit), o que faz com que os arquivos que estão na área de preparação e armazenam uma foto que ficará permanentemente guardado no repositório (.git directory);
 4. A versão mais atualizada do projeto agora está na área de trabalho (Checkout the project).
 
-# Instalação e configuração
+# ⚙️ Instalação e configuração
 
 No Windows é necessário baixar o programa por esse site [**neste link**](https://git-scm.com/).
 
@@ -75,7 +66,7 @@ git config --list
 
 É recomendado que se cadastre o mesmo endereço de e-mail utilizado no cadastro do GitHub, caso for utilizá-lo como repositório remoto padrão.
 
-# Navegando pelos diretórios e criando um repositório
+# 🧭 Navegando pelos diretórios e criando um repositório
 
 O terminal é sempre aberto na raiz do computador, ou seja, no (C:), dessa forma precisamos navegar pelos diretórios até chegar no arquivo em que queremos criar o nosso repositório e o nosso projeto. Dentro do Git, pastas são chamadas de diretórios, que são onde armazenamos os nossos arquivos.
 
@@ -138,7 +129,7 @@ git clone endereco-do-repositorio
 
 O `clone` é muito usado com equipes no momento em que cada membro deve ter o projeto em sua máquina local e compartilham um repositório remoto. Ou então quando temos uma máquina corrompida, podemos recuperar o nosso projeto do remoto através desse comando.
 
-# Gravando alterações no repositório
+# 💾 Gravando alterações no repositório
 
 Os arquivos de um repositório podem ter dois estados:
 
@@ -152,7 +143,7 @@ Os arquivos de um repositório podem ter dois estados:
     São arquivos que ainda não foram alterados, então não estão sendo rastreado pelo Git, ou seja, não estavam na última foto e nem foram adicionados na área de preparação. Podem ser arquivos recém-criados.
     
 
-![https://git-scm.com/book/en/v2/images/lifecycle.png](https://git-scm.com/book/en/v2/images/lifecycle.png)
+<div align="center"><img src="https://git-scm.com/book/en/v2/images/lifecycle.png"></div>
 
 O estado do arquivo se altera conforme atualizamos as informações e damos os comandos. Por exemplo, ao ser criado o arquivo está como `untracked` e então se transforma em `staged` uma vez que o adicionamos na área de preparação.
 
@@ -184,13 +175,6 @@ O `log` mostra um histórico de commits criados dentro do projeto. Ele informa a
 ```bash
 git log
 ```
-
-<aside>
-📌 Para saber mais sobre mensagens de commit, veja:
-
-[**Git & Github**](https://dev.to/tatidev/guia-de-comandos-git-e-github-para-desenvolvedores-iniciantes-968)
-
-</aside>
 
 ## Revertendo mudanças em commits
 
@@ -230,14 +214,9 @@ Caso queremos desfazer as alterações feitas em um arquivo ainda não comitado,
 git checkout HEAD -- nome-do-arquivo
 ```
 
-# Atualizando o repositório remoto e local
+# 🔛 Atualizando o repositório remoto e local
 
 Os repositórios remotos são versões dos nossos projetos hospedados na Internet ou em alguma rede em algum lugar (servidor). Esses espaços são úteis quando estamos trabalhando em colaboração com outras pessoas, pois conseguimos subir e baixar informações dos projetos atualizados de forma síncrona.
-
-<aside>
-📌 Para saber mais sobre o GitHub, veja:
-
-</aside>
 
 Conseguimos conectar o nosso repositório local com algum repositório remoto, dessa forma todas as vezes que comitamos alguma alteração no nosso projeto podemos subi-la e compartilhar as versões mais atualizadas com a nossa equipe.
 
@@ -267,13 +246,13 @@ O `pull` é o processo inverso ao `push`, ou seja, puxa as alterações remotas 
 git pull
 ```
 
-# Trabalhando com *branches*
+# 🌿 Trabalhando com *branches*
 
 Branch significa que você diverge da linha principal de desenvolvimento e continua a trabalhar sem bagunçar a linha principal, ou seja, imaginando que o nosso fluxo é uma árvore, sendo a main o nosso tronco, conseguimos criar galhos ramificando nosso projeto e trabalhando em pontos distintos de nosso projeto sem afetar o trabalho principal.
 
 Ao criarmos um repositório temos a branch principal (atualmente chamada de `main` e não master) que armazena alguns commits. Conseguimos então criar uma nova `branch` chamada `iss53` e ao trabalharmos nela conseguimos criar novas versões do projeto sem afetar o desenvolvimento na `main`. Na branch principal estamos na atualização C2, enquando na outra branch estamos na C3.
 
-![https://git-scm.com/book/en/v2/images/basic-branching-3.png](https://git-scm.com/book/en/v2/images/basic-branching-3.png)
+<div align="center"><img src="https://git-scm.com/book/en/v2/images/basic-branching-3.png"></div>
 
 ```bash
 git branch
@@ -319,15 +298,15 @@ git merge branch-mergeada
 
 O `merge` une a branch informada no comando com a branch que estamos posicionados no terminal. Ou seja, se estamos na `main`, todas as alterações feitas na branch serão implementadas nela.
 
-![https://git-scm.com/book/en/v2/images/basic-merging-1.png](https://git-scm.com/book/en/v2/images/basic-merging-1.png)
+<div align="center"><img src="https://git-scm.com/book/en/v2/images/basic-merging-1.png"></div>
 
 No fluxo de trabalho, as branches trabalham de forma paralela, onde possuem um ancestral comum (na imagem, C2). No momento do `merge`, as alterações da branch que queremos mergear (na imagem, a iss53 com o C5) são atualizadas dentro da branch que queremos (no exemplo a master). Dessa forma, temos que ser cuidadosos com as alterações e possíveis conflitos entres as versões dentro de cada branch.
 
-# Ignorando arquivos
+# 🚫 Ignorando arquivos
 
 O arquivo `.gitignore` reune uma lista de diretórios e arquivos que desejamos não adicionar automaticamente no nosso diretório .git, mas que de alguma forma são necessários para o desenvolvimento do nosso projeto.
 
-# Contribuições de repositórios terceiros
+# 🤝 Contribuições de repositórios terceiros
 
 Dentro do Github conseguimos fazer colaborações com repositórios de outras pessoas. Isso é possível por causa de dois conceitos: o `fork` e o `pull request`.
 
